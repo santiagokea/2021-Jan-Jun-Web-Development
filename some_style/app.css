@@ -12,7 +12,8 @@ body{
 
 div#users{
   display: grid;
-  grid-template-columns: 10fr 10fr;
+  /* grid-template-columns: repeat(3, 10fr); */
+  grid-template-columns: 100fr 50fr 100fr;
   grid-gap: 1rem;
   padding: 1rem;
 }
