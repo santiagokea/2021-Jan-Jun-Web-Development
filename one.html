@@ -12,12 +12,17 @@
   <div id="label_name">
     Santiago
   </div>
+  <button onclick="hide_name()">Hide Name</button>
   
   <script>
+
+    function hide_name(){
+      document.querySelector("#label_name").classList.add("hide")
+    }
+    
     // document.querySelector("#label_name").style.display = "none"
-    document.querySelector("#label_name").classList.add("hide")
-    document.querySelector("#label_name").classList.remove("hide")
- 
+    // document.querySelector("#label_name").classList.remove("hide")
+    
   </script>
   
 </body>
