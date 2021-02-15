@@ -35,7 +35,6 @@ function show_items(){
 show_items()
 
 
-
 // ##############################
 function render_item(item){
   let div_item = `
