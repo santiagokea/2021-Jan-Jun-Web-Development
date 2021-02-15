@@ -7,7 +7,30 @@
   <title>Document</title>
 </head>
 <body>
-  
+ 
+  <script>
+    // JSON OBJECTS NOT JavaScript OBJECTS
+    // Double quote the keys
+    // Value can be a number, null, text, boolean
+    let user = {"id":1, "name":"a"}
+    // add a key-value to the user
+    user.last_name = "aa"
+    user.email = "@a"
+    // delete a key value from the user
+    delete user.last_name
+    // How do I update the name to x?
+    user.name = "x"
+    // console.log( user )
+
+    let people = []
+    let person_one = {"id":1,"name":"a"}
+    let person_two = {"id":2,"name":"b"}
+    // How to I add those 2 person to people?
+    people.push(person_one)
+    people.push(person_two)
+    console.log( people )
+  </script>
+
 </body>
 </html>
 
