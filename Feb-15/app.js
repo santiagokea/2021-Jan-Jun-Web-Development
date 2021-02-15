@@ -26,9 +26,15 @@ function create_item(){
 function show_items(){
   if( localStorage.items ){
     // convert the items to an array
-    array_items = JSON.parse(localStorage.items) // text to array
+    const array_items = JSON.parse(localStorage.items) // text to array
     array_items.forEach( item => {
-      console.log("x")
+      let div_item = `
+      <div class="item">
+        <div>1</div>
+        <div>${item}</div>
+        <button>delete item</button>
+      </div>`
+      document.querySelector("#items").insertAdjacentHTML('beforeend', div_item)
     })
   }
 }
