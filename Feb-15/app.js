@@ -5,6 +5,11 @@ function create_item(){
   // check if there are items already in localStorage
   if( localStorage.items ){
     console.log("yes items already there")
+    // items is just text, but looks like an array, so convert it to an array
+    const items = JSON.parse(localStorage.items) // converts text into array
+    items.push(item_name)
+    // save it to the localStorage, but this is an array... we need text
+    localStorage.items = JSON.stringify(items)
   }else{
     console.log("no, items not there. It is empty")
     const items = []
