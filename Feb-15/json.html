@@ -9,6 +9,43 @@
 <body>
  
   <script>
+    // many, array -> loop
+    let people = []
+    let person_one =    {"id":1,"name":"a"}
+    let person_two =    {"id":2,"name":"b"}
+    let person_three =  {"id":3,"name":"c"}
+    // How to I add those 2 person to people?
+    people.push(person_one)
+    people.push(person_two)
+    people.push(person_three)
+    // If the name is x you will show wow
+    for(let i = 0; i < people.length; i++){
+      if(people[i].name == "x"){
+        console.log("wow")
+      }else{
+        console.log(people[i].name)
+      }
+    }
+
+    /*
+    User with id 1 is called a
+    User with id 2 is called b
+    User with id 3 is called c
+
+    User with id 1 is called a
+    User with id 2 is called b
+    User with id 3 is called wow
+
+    */
+
+
+
+
+
+
+
+
+    /*
     // JSON OBJECTS NOT JavaScript OBJECTS
     // Double quote the keys
     // Value can be a number, null, text, boolean
@@ -37,9 +74,9 @@
     people.forEach( person => total = total + person.age )
     // calculate average
     let average = total / total_people
-    console.log(average)
+    // console.log(average)
     // console.log(total)
-    console.log(people)
+    // console.log(people)
     // console.log(total_people)
 
     // let random_age = Math.floor(Math.random()*151)
@@ -53,6 +90,7 @@
     // people[1].name = "x"
     // Math.random() // age must be between 0 and 150
     // console.log( people )
+    */
   </script>
 
 </body>
