@@ -9,10 +9,11 @@
 <body>
  
   <script>
+
     // many, array -> loop
     let people = []
     let person_one =    {"id":1,"name":"a"}
-    let person_two =    {"id":2,"name":"b"}
+    let person_two =    {"id":2,"name":"x"}
     let person_three =  {"id":3,"name":"c"}
     // How to I add those 2 person to people?
     people.push(person_one)
@@ -21,9 +22,9 @@
     // If the name is x you will show wow
     for(let i = 0; i < people.length; i++){
       if(people[i].name == "x"){
-        console.log("wow")
+        console.log(`User with id ${people[i].id} is called wow`)
       }else{
-        console.log(people[i].name)
+        console.log(`User with id ${people[i].id} is called ${people[i].name}`)
       }
     }
 
