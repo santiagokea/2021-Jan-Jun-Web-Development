@@ -28,14 +28,18 @@
     // How to I add those 2 person to people?
     people.push(person_one)
     people.push(person_two)
+    people.forEach( person => person.age = Math.floor(Math.random()*151) )
+    // let random_age = Math.floor(Math.random()*151)
+    console.log(people)
     // Update every person to have a key called 
     // created and the value is 0. The id
     // and name stays intact
-    people.forEach( person => person.created = 0 )
+    // people.forEach( person => person.created = 0 )
     // for(const person of people) person.created = 0
     // Update the name b to x
     // people[1].name = "x"
-    console.log( people )
+    // Math.random() // age must be between 0 and 150
+    // console.log( people )
   </script>
 
 </body>
