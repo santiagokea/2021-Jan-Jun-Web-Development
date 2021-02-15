@@ -23,14 +23,27 @@
     // console.log( user )
 
     let people = []
-    let person_one = {"id":1,"name":"a"}
-    let person_two = {"id":2,"name":"b"}
+    let person_one = {"id":1,"name":"a"} // 5
+    let person_two = {"id":2,"name":"b"} // 7
     // How to I add those 2 person to people?
     people.push(person_one)
     people.push(person_two)
     people.forEach( person => person.age = Math.floor(Math.random()*151) )
-    // let random_age = Math.floor(Math.random()*151)
+
+    // Calculate the average age of people and show it in the console
+    const total_people = people.length
+    // loop through each person and get the age added to the total
+    let total = 0
+    people.forEach( person => total = total + person.age )
+    // calculate average
+    let average = total / total_people
+    console.log(average)
+    // console.log(total)
     console.log(people)
+    // console.log(total_people)
+
+    // let random_age = Math.floor(Math.random()*151)
+    // console.log(people)
     // Update every person to have a key called 
     // created and the value is 0. The id
     // and name stays intact
