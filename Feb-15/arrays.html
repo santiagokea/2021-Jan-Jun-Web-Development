@@ -9,13 +9,88 @@
 <body>
   
   <script>
-    let letters = ["a", "b", "c"] // this is an array - plural
 
-    // for for-of for-in forEach
-    for(let i = 0; i < letters.length; i++){
+    // == vs ===
+    // let price = "10"
+    // // if( price == 10 ){
+    // //   console.log("cheap")
+    // // }
+    // if( price === 10 ){ // check also the data type
+    //   console.log("cheap")
+    // }
+
+    const letters = ["a", "b", "c", "d", "e"]
+    for(let i = 0 ; i < letters.length; i+=2){
       console.log(letters[i])
     }
+
+
+    
+    // const letters = ["a", "b", "c", "d", "e"]
+    // for(let i = 0 ; i < letters.length; i++){
+    //   if( letters[i] == "x" ){
+    //     console.log("wow")
+    //   }else{
+    //     console.log(letters[i])
+    //   }
+    // }
+    
+
+    // FOR OF
+    // const letters = ["a", "x", "c", "d", "e"]
+    // for(const letter of letters){
+    //   if( letter == "x" ){
+    //     console.log("wow")
+    //   }else{
+    //     console.log(letter)
+    //   }
+    // }
+
+
+
+
+    // one = is to assign
+    // two equals is to compare
+    // let name = "aaa"
+    // if(name == "aaa"){
+    //   console.log("yes")
+    // }else{
+    //   console.log("no")
+    // }
+
+
+    // //             0     1    2
+    // let letters = ["a", "b", "c"] // this is an array - plural
+
+    // // for for-of for-in forEach
+    // for(let i = 1; i < letters.length; i++){
+    //   console.log(letters[i])
+    // }
     // How will you show only b and c ?
+
+
+    /*
+    Create an array with 5 letters a b c d e
+    show all letters, but if any of those letters
+    is an x then you show WOW in stead of the letter
+    a b c x e
+    a
+    b
+    c
+    wow
+    e
+
+    a x c d e
+    a
+    wow
+    c
+    d
+    e
+    */
+
+
+
+
 
     // console.log( letters )
     // console.log( letters[0] )
