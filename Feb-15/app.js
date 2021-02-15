@@ -20,3 +20,19 @@ function create_item(){
     localStorage.items = items_array_as_text
   }
 }
+
+// ##############################
+
+function show_items(){
+  if( localStorage.items ){
+    // convert the items to an array
+    array_items = JSON.parse(localStorage.items) // text to array
+    array_items.forEach( item => {
+      console.log("x")
+    })
+  }
+}
+show_items()
+
+
+
