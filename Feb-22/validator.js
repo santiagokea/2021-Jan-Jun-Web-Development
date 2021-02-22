@@ -33,12 +33,11 @@ function validate(){
         }
       break
       case "email":
-        const re = /^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$/;        
+        const re = /^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$/
         if( ! re.test(element.value.toLowerCase()) ){ 
           element.classList.add("error")
         }
       break
-
     }
   })
 
