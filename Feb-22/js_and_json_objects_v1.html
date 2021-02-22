@@ -9,9 +9,36 @@
 <body>
   
   <div id="users">
-
   </div>
-  <button onclick="create_user()"></button>
+
+  <button onclick="user.show()">
+    Show user
+  </button>
+
+  <script>
+
+    const user = {
+      "show" : () => {
+        // I will not use this
+        const div_user = `
+          <div class="user">
+            USER
+            <button onclick="user.delete()">Delete user</button>
+          </div>`
+        one("#users").insertAdjacentHTML("beforeend", div_user)
+      },
+      "delete" : function(){
+
+      }
+    }
+
+    // document.querySelector --- one
+    // document.querySelectorAll -- all
+    // Library - best ever library
+    function one(selector){ return document.querySelector(selector)}
+    function all(selector){return document.querySelectorAll(selector)}
+
+  </script>
 
   <!-- 
 
