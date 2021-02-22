@@ -10,6 +10,7 @@
 <body>
   
   <form onsubmit="validate(); return false">
+
     <div>
       <div>
         name <span class="soft">(min 2 max 4 characters)</span>
@@ -18,6 +19,7 @@
       data-validate="str" data-min="2" data-max="4"
       >
     </div>
+
     <div>
       <div>
         last name <span class="soft">(min 2 max 4 characters)</span>
@@ -26,6 +28,17 @@
       data-validate="str" data-min="2" data-max="4"
       >    
     </div>  
+
+    <div>
+      <div>
+        phone <span class="soft">(8 digits)</span>
+      </div>
+      <input onclick="clear_error()" type="text" placeholder="last name"    
+      data-validate="int" data-min="10000000" data-max="99999999"
+      >    
+    </div>  
+ 
+
     <button>signup</button>
   </form>
   
