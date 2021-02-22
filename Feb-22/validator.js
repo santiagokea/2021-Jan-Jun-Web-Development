@@ -28,10 +28,17 @@ function validate(){
         min = parseInt(element.getAttribute("data-min")) // number
         max = parseInt(element.getAttribute("data-max")) // number
         let phone = parseInt(element.value)
-        if( phone < min || phone > max ){
+        if( ! phone || phone < min || phone > max ){
           element.classList.add("error")     
         }
       break
+      case "email":
+        const re = /^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$/;        
+        if( ! re.test(element.value.toLowerCase()) ){ 
+          element.classList.add("error")
+        }
+      break
+
     }
   })
 
