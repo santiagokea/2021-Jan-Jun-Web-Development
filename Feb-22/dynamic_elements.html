@@ -14,7 +14,7 @@
       <form onsubmit="return false">
         <span>id</span> <span>1</span>
         <span>name</span> <span>a</span>
-        <button>delete</button>
+        <button onclick="">delete</button>
       </form>
     </div>
 
@@ -28,6 +28,15 @@
       // connect to the server
       // get an array with json elements (items)
       // createElement
+      // Create an array with 3 items... each item is a JSON object
+      // Loop though the array and how those items
+      const items = [
+        {"id":5, "name":"five"},
+        {"id":6, "name":"six"},
+        {"id":7, "name":"seven"}
+      ]
+
+
       const item = `
         <div class="item">
         <form onsubmit="return false">
@@ -37,7 +46,7 @@
         </form>
       </div>`
       document.querySelector("#items").insertAdjacentHTML("beforeend",  item)
-      addEvents()
+      addEvents() // this will re-generate the listener, so now you have two
     })
 
     function addEvents(){
