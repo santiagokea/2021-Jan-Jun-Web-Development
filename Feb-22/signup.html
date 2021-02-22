@@ -10,12 +10,22 @@
 <body>
   
   <form onsubmit="validate(); return false">
-    <input type="text" placeholder="name"
-    data-validate="str" data-min="2" data-max="4"
-    >
-    <input type="text" placeholder="last name"
-    data-validate="str" data-min="2" data-max="4"
-    >    
+    <div>
+      <div>
+        name <span class="soft">(min 2 max 4 characters)</span>
+      </div>
+      <input onclick="clear_error()" type="text" placeholder="name"
+      data-validate="str" data-min="2" data-max="4"
+      >
+    </div>
+    <div>
+      <div>
+        last name <span class="soft">(min 2 max 4 characters)</span>
+      </div>
+      <input onclick="clear_error()" type="text" placeholder="last name"
+      data-validate="str" data-min="2" data-max="4"
+      >    
+    </div>  
     <button>signup</button>
   </form>
   

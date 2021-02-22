@@ -18,6 +18,10 @@ function validate(){
   })
 }
 
+function clear_error(){
+  event.target.classList.remove("error")
+}
+
 
 
 function one(selector){ return document.querySelector(selector)}
