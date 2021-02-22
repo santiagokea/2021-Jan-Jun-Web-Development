@@ -9,19 +9,24 @@ function validate(){
 
   all("[data-validate]").forEach( element => {
     
-    switch(element.getAttribute("[data-validate]")){ // str | int
+    switch(element.getAttribute("data-validate")){ // str | int
       case "str":
-        const min = element.getAttribute("data-min")
-        const max = element.getAttribute("data-max")
-        const total_characters = element.value.length
+        let min = element.getAttribute("data-min")
+        let max = element.getAttribute("data-max")
+        let total_characters = element.value.length
         console.log(total_characters)
         if( total_characters < min ||  total_characters > max){
           element.classList.add("error")      
         }
       break
       case "int":
-
-
+        console.log("validate phone")
+        let min = parseInt(element.getAttribute("data-min")) // number
+        let max = parseInt(element.getAttribute("data-max")) // number
+        let phone = parseInt(element.value)
+        if( phone < min || phone > max ){
+          element.classList.add("error")     
+        }
       break
     }
   })
