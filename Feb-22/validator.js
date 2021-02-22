@@ -4,8 +4,8 @@ function validate(){
   all("[data-validate]").forEach( element => {
     const min = element.getAttribute("data-min")
     const max = element.getAttribute("data-max")
-    console.log(min)
-    console.log(max)
+    const total_characters = element.value.length
+    console.log(total_characters)
   })
 }
 
