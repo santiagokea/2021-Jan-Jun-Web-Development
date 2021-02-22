@@ -7,12 +7,16 @@ function validate(){
     element.classList.remove("error")
   })
 
+  let min
+  let max
+
   all("[data-validate]").forEach( element => {
     
     switch(element.getAttribute("data-validate")){ // str | int
+
       case "str":
-        let min = element.getAttribute("data-min")
-        let max = element.getAttribute("data-max")
+        min = element.getAttribute("data-min")
+        max = element.getAttribute("data-max")
         let total_characters = element.value.length
         console.log(total_characters)
         if( total_characters < min ||  total_characters > max){
@@ -21,8 +25,8 @@ function validate(){
       break
       case "int":
         console.log("validate phone")
-        let min = parseInt(element.getAttribute("data-min")) // number
-        let max = parseInt(element.getAttribute("data-max")) // number
+        min = parseInt(element.getAttribute("data-min")) // number
+        max = parseInt(element.getAttribute("data-max")) // number
         let phone = parseInt(element.value)
         if( phone < min || phone > max ){
           element.classList.add("error")     
