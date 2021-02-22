@@ -24,11 +24,21 @@
           const div_user = `
             <div class="user">
               <span>${user.id}</span> <span>${user.name}</span>
+              <button onclick="user.delete()">
+                delete ${user.name}
+              </button>
             </div>`
           one("#users").insertAdjacentHTML("beforeend", div_user)
         })
+      },
 
+      "delete" : function(){
+        // console.log("delete user", user_id)
+        // console.log(event.target)
+        // event.target is the button
+        event.target.parentNode.remove()
       }
+
     }
 
     user.show_users()
