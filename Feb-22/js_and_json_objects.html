@@ -26,19 +26,36 @@
     // JS object  CAN have functions
 
     let user = {
-      "id" : 1,
-      "name":"a",
+      "id" : 2,
+      "name":"b",
       "show" : function(){
-        console.log("user here")
+        const user_id = this.id
+        const user_name = this.name
+        console.log(`id ${user_id} name ${user_name}`)
       },
       "delete" : function(){
         console.log("deleting user...")
       }
     }
-    console.log(user.id)
-    console.log(user.name)
-    user.show()
-    user.delete()
+    // user.show()
+    // user.delete()
+
+    // Nodejs think about the scope 
+    // of functions and arrow functions
+    // packages use function arrow function
+    const item = {
+      "id" : 1345,
+      "create" : function(){
+        console.log("create item") 
+      },
+      "delete" : function() {
+        console.log(`delete ${this.id}` )
+        // console.log(`delete item` )
+      }
+    }
+    // item.create()
+    item.delete()
+
 
   </script>
 
