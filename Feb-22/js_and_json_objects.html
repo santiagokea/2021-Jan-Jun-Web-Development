@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS and JSON objects</title>
+</head>
+<body>
+  
+  <script>
+    // thousands of lines
+    // users, items, posts, likes, ... ... ...friends
+    // block, delete
+    // create an item, delete item, update item
+    // friend, unfriend, block
+    // unlike post, like post
+    // 50.000 
+    // JS object JSON objects
+    // JSON double qoutes around keys
+    // value number, string, null, array, json
+    // const user = {"id":1, "name":"a"} // JSON object
+    // const user_one = {id:1, name:"a"} // JS object
+
+    // JSON object cannot have function in it
+    // JS object  CAN have functions
+
+    let user = {
+      "id" : 1,
+      "name":"a",
+      "show" : function(){
+        console.log("user here")
+      },
+      "delete" : function(){
+        console.log("deleting user...")
+      }
+    }
+    console.log(user.id)
+    console.log(user.name)
+    user.show()
+    user.delete()
+
+  </script>
+
+
+</body>
+</html>
