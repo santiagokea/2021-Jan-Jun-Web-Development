@@ -10,7 +10,9 @@
 <body>
   
   <form onsubmit="validate(); return false">
-    <input type="text" placeholder="name">
+    <input type="text" placeholder="name"
+    data-validate="str" data-min="2" data-max="4"
+    >
     <button>signup</button>
   </form>
   
