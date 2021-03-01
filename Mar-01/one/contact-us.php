@@ -1,5 +1,5 @@
 <?php
-$top_active = 'contact-us-now';
+$top_active = 'contact';
 $top_page_title = 'Contact Us';
 require_once(__DIR__.'/top.php');
 ?>
