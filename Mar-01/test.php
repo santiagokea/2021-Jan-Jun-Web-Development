@@ -10,8 +10,13 @@
 // echo "Hi $name";
 // If you don't use variable in the sentence
 // then use single quotes
-$name = 'A';
-$last_name = 'B';
-echo 'Hi '.$name.' '.$last_name;
-
+// $name = 'A';
+// $last_name = 'B';
+// echo 'Hi '.$name.' '.$last_name;
+// echo "Hi $name $last_name";
+// No quotes on numbers
+// PHP is friendly nice to the coder
+$year = "a2021";
+$next_year = $year + 1; // plus is used for math
+echo $next_year;
 
