@@ -12,10 +12,10 @@ $letters = ['a', 'b', 'c'];
 <body>
   <div id="letters">
     <?php
-    foreach($letters as $letter){
+    foreach($letters as $index=>$letter){
     ?>
       <div class="letter">
-        <?= $letter; ?>
+        ID <?= $index ?> Name <?= $letter ?>
       </div>
     <?php
     }
