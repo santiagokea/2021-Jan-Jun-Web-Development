@@ -2,7 +2,7 @@
 
 $user = ['name'=>'a', 'last_name'=>'b'];
 foreach($user as $key => $value){
-  echo "$key $value";
+  echo "<div>$key $value</div>";
 }
 
 
