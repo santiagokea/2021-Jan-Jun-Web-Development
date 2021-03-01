@@ -12,7 +12,7 @@
 <body>
 
   <nav>
-    <a href="index.php">index</a>
-    <a href="about-us.php">about us</a>
-    <a href="contact-us.php">contact us</a>
+    <a href="index.php" class="active">index</a>
+    <a href="about-us.php" class="active">about us</a>
+    <a href="contact-us.php" class="active">contact us</a>
   </nav>
