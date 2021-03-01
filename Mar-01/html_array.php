@@ -1,3 +1,6 @@
+<?php
+$letters = ['a', 'b', 'c'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +10,16 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <div id="letters">
+    <?php
+    foreach($letters as $letter){
+    ?>
+      <div class="letter">
+        <?= $letter; ?>
+      </div>
+    <?php
+    }
+    ?>
+  </div>
 </body>
 </html>
