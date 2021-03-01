@@ -1,6 +1,3 @@
-<?php
-$name = 'Santiago';
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,11 +7,6 @@ $name = 'Santiago';
   <title>Document</title>
 </head>
 <body>
-  <h1>
-    <?= $name; ?>
-  </h1>
-  <h2>
-    <?= $name; ?>
-  </h2>
+  
 </body>
 </html>
