@@ -1,4 +1,5 @@
 <?php
+  // ini_set('display_errors', 0);
   // require require_once include include_one
   // require -> must be there or stop the page
   // require_once -> use it only 1 time
