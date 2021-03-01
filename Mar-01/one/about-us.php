@@ -1,4 +1,5 @@
 <?php
+$top_page_title = 'About Us';
 require_once(__DIR__.'/top.php');
 ?>
 
