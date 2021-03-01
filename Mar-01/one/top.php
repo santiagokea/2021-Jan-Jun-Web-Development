@@ -14,5 +14,5 @@
   <nav>
     <a href="index.php" class="<?php if($top_active=='index'){ echo 'active'; } ?>">index</a>
     <a href="about-us.php" class="<?php if($top_active=='about'){ echo 'active'; } ?>">about us</a>
-    <a href="contact-us.php" class="">contact us</a>
+    <a href="contact-us.php" class="<?php if($top_active=='contact-us-now'){ echo 'active'; } ?>">contact us</a>
   </nav>
