@@ -4,6 +4,7 @@
   $user_one->id = 1;
   $user_one->name = 'a';
   array_push($users, $user_one);
+  // [  {"id":1, "name":"a"} ]
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +15,8 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <div>
+    <?= $users[0]->name ?>
+  </div>
 </body>
 </html>
