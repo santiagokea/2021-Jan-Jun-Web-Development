@@ -1,8 +1,10 @@
 <?php
-  require_once(__DIR__.'/top.php');
+require_once(__DIR__.'/top.php');
 ?>
 
 
   <h1>About us</h1>
-</body>
-</html>
+
+<?php
+require_once(__DIR__.'/bottom.php');
+?>

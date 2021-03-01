@@ -5,9 +5,15 @@
   // require_once -> use it only 1 time
   // include -> nice it tries to use it
   // include_one -> 1 time
-  require_once(__DIR__.'/top.php');
+$page_title = 'Welcome : : Welcome'; 
+require_once(__DIR__.'/top.php');
 ?>
 
+<main>
   <h1>Welcome</h1>
-</body>
-</html>
+</main>
+
+
+<?php
+require_once(__DIR__.'/bottom.php');
+?>
