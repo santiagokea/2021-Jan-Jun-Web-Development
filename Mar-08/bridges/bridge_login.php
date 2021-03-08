@@ -26,7 +26,6 @@
     exit();
   }  
 
-
   // VALIDATE VALIDATE VALIDATE
   if( ! filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL) ){
     // header('Location: /login/error?message=Invalid Email');
