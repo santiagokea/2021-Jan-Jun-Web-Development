@@ -10,9 +10,9 @@ function render_login(){
 }
 
 // ##############################
-get('/login/error', 'render_login_error');
-function render_login_error(){
-  $display_error = true;
+get('/login/error/:message', 'render_login_error');
+function render_login_error($message){
+  $display_error = $message;
   require_once(__DIR__.'/views/view_login.php');
   exit();
 }

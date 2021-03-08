@@ -12,7 +12,7 @@
   if( isset($display_error) ){
   ?>
     <div>
-      ERROR
+      ERROR <?= $display_error ?>
     </div>
   <?php
   }
