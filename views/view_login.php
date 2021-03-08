@@ -7,6 +7,17 @@
   <title>Document</title>
 </head>
 <body>
+
+  <?php
+  if( isset($display_error) ){
+  ?>
+    <div>
+      ERROR
+    </div>
+  <?php
+  }
+  ?>
+
   <form action="/login" method="POST">
     <input name="user_email" type="text" placeholder="email">
     <button>login</button>

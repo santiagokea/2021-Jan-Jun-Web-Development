@@ -7,12 +7,12 @@
 
   // VALIDATE VALIDATE VALIDATE
   if( ! filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL) ){
-    header('Location: /login');
+    header('Location: /login/error');
     exit();
   }
 
-  if( ! $right_email == $_POST['user_email'] ){
-    header('Location: /login');
+  if( $right_email != $_POST['user_email'] ){
+    header('Location: /login/error');
     exit();
   }
 

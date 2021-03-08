@@ -10,6 +10,15 @@ function render_login(){
 }
 
 // ##############################
+get('/login/error', 'render_login_error');
+function render_login_error(){
+  $display_error = true;
+  require_once(__DIR__.'/views/view_login.php');
+  exit();
+}
+
+
+// ##############################
 get('/profile', 'render_profile');
 function render_profile(){
   require_once(__DIR__.'/views/view_profile.php');
