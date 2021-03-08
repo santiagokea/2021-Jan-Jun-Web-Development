@@ -3,6 +3,7 @@
 require_once(__DIR__.'/router.php');
 
 // ##############################
+// ##############################
 get('/login', 'render_login');
 function render_login(){
   require_once(__DIR__.'/views/view_login.php');
