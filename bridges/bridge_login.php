@@ -1,8 +1,21 @@
 <?php
   // redirect
-  // header('Location: /login'); // on error
-  header('Location: /profile'); // on success
+  // Connect to the db 
+  // check if there is a match in the email and password
+  $right_email = 'a@a.com';
+  // error redirect to login
 
+  // VALIDATE VALIDATE VALIDATE
+  if( ! filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL) ){
+    header('Location: /login');
+    exit();
+  }
 
+  if( ! $right_email == $_POST['user_email'] ){
+    header('Location: /login');
+    exit();
+  }
 
-  // Lunch til 12.00
+  // success show profile
+  header('Location: /profile');
+  exit();
