@@ -9,7 +9,23 @@
   // strlen() >
 
   $right_email = 'a@a.com';
+  $right_password = '12345';
   // error redirect to login
+
+  // Validate password
+  if( strlen($_POST['user_password']) < 2){
+    $error_message = 'Password must be at least 2 characters';
+    header("Location: /login/error/$error_message");
+    exit();
+  }
+
+  // Validate password
+  if( strlen($_POST['user_password']) > 5){
+    $error_message = 'Password cannot be longer than 5 characters';
+    header("Location: /login/error/$error_message");
+    exit();
+  }  
+
 
   // VALIDATE VALIDATE VALIDATE
   if( ! filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL) ){
@@ -19,12 +35,13 @@
     exit();
   }
 
-  if( $right_email != $_POST['user_email'] ){
+  if( $right_email != $_POST['user_email'] ||  $right_password != $_POST['user_password']  ){
     // header('Location: /login/error?message=Email not found');
-    $error_message = 'Email not found';
+    $error_message = 'Incorrect credentials';
     header("Location: /login/error/$error_message");
     exit();
   }
+
 
   // success show profile
   header('Location: /profile');
