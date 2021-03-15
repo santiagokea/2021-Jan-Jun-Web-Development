@@ -16,6 +16,11 @@
         </a>
       </li>
       <li>
+        <a href="/users">
+          users
+        </a>
+      </li>        
+      <li>
         <a href="/login">
           login
         </a>
