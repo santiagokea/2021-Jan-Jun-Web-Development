@@ -21,6 +21,13 @@ function serve_login(){
 }
 
 // ##################################################
+post('/login', 'login');
+function login(){
+  require_once(__DIR__.'/bridges/bridge_login.php');
+  exit();
+}
+
+// ##################################################
 any('/404', 'error404');
 function error404(){
   echo 'Not found';
