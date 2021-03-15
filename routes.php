@@ -5,6 +5,8 @@ require_once(__DIR__.'/router.php');
 // ##################################################
 get('/', 'serve_index');
 function serve_index(){
+  $page_title = 'Welcome';
+  require_once(__DIR__.'/views/view_top.php');
   require_once(__DIR__.'/views/view_index.php');
   exit();
 }
@@ -12,6 +14,8 @@ function serve_index(){
 // ##################################################
 get('/login', 'serve_login');
 function serve_login(){
+  $page_title = 'login';
+  require_once(__DIR__.'/views/view_top.php');
   require_once(__DIR__.'/views/view_login.php');
   exit();
 }
