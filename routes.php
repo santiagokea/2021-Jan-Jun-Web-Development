@@ -27,6 +27,14 @@ function serve_login(){
   exit();
 }
 
+
+// ##################################################
+get('/logout', 'serve_logout');
+function serve_logout(){
+  require_once(__DIR__.'/bridges/bridge_logout.php');
+  exit();
+}
+
 // ##################################################
 get('/users', 'serve_users');
 function serve_users(){

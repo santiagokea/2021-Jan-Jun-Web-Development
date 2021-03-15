@@ -14,6 +14,8 @@
       echo "Hi {$_SESSION['email']}";
     ?>
   </h1>
+
+  <a href="/logout">logout</a>
   
 </body>
 </html>
