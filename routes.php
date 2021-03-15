@@ -7,7 +7,7 @@ require_once(__DIR__.'/router.php');
 // ##################################################
 get('/', 'serve_index');
 function serve_index(){
-  echo 'index';
+  require_once(__DIR__.'/views/view_index.php');
   exit();
 }
 
