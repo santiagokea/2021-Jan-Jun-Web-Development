@@ -3,7 +3,13 @@ require_once(__DIR__.'/../db.php');
 
 $q = $db->prepare('SELECT * FROM users');
 $q->execute();
-$rows = $q->fetchAll();
-// print_r($rows);
-// var_dump($rows);
-echo json_encode($rows);
+$users = $q->fetchAll(); // PDO::FETCH_ASSOC
+
+foreach($users as $user){
+  echo "
+  <div class='user'>
+    <div>ID: $user->id</div>
+    <div>EMAIL: $user->email</div>
+  </div>
+  ";
+}
