@@ -12,6 +12,13 @@ function serve_index(){
 }
 
 // ##################################################
+get('/admin', 'serve_admin');
+function serve_admin(){
+  require_once(__DIR__.'/views/view_admin.php');
+  exit();
+}
+
+// ##################################################
 get('/login', 'serve_login');
 function serve_login(){
   $page_title = 'login';
