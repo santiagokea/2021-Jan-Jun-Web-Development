@@ -3,8 +3,6 @@
 require_once(__DIR__.'/router.php');
 
 // ##################################################
-// ##################################################
-// ##################################################
 get('/', 'serve_index');
 function serve_index(){
   require_once(__DIR__.'/views/view_index.php');
@@ -12,11 +10,13 @@ function serve_index(){
 }
 
 // ##################################################
-// ##################################################
-// ##################################################
-// any can be used for GETs or POSTs
+get('/login', 'serve_login');
+function serve_login(){
+  require_once(__DIR__.'/views/view_login.php');
+  exit();
+}
 
-// For GET or POST
+// ##################################################
 any('/404', 'error404');
 function error404(){
   echo 'Not found';

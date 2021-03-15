@@ -9,8 +9,8 @@
 <body>
   
   <form action="/login" method="POST">
-    <input type="text" placeholder="email">
-    <input type="password" placeholder="password">
+    <input name="user_email" type="text" placeholder="email">
+    <input name="user_password" type="password" placeholder="password">
     <button>login</button>
   </form>
 
