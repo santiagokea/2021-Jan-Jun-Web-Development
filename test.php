@@ -11,3 +11,5 @@ $name = 'Santiago';
 $_SESSION['name'] = $name;
 $_SESSION['last_name'] = 'Donoso';
 // store the year
+// $_SESSION['year'] = 2021;
+$_SESSION['year'] = date('Y');
