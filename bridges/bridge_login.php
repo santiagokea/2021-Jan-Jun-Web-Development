@@ -16,7 +16,7 @@ try{
   // if the email is in the db we get [{"id":"1","email":"a@a.com"}]
   // The user is not found in the db
   if( count($user) == 0 ){
-    header('Location: /login');
+    header('Location: /login/error');
     exit();
   }
   // The user is found in the db

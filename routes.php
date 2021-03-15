@@ -32,6 +32,15 @@ function serve_login(){
   exit();
 }
 
+// ##################################################
+get('/login/error', 'serve_login_error');
+function serve_login_error(){
+  $page_title = 'login';
+  require_once(__DIR__.'/views/view_top.php');
+  $display_error = true;
+  require_once(__DIR__.'/views/view_login.php');
+  exit();
+}
 
 // ##################################################
 get('/logout', 'serve_logout');
