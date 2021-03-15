@@ -15,6 +15,11 @@
           home
         </a>
       </li>
+      <li>
+        <a href="/login">
+          login
+        </a>
+      </li>      
     </ul>
   </nav>
 
