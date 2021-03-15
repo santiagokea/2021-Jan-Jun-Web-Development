@@ -9,8 +9,7 @@
 <body>
 
   <h1>
-    <?php 
-      session_start();
+    <?php   
       echo "Hi {$_SESSION['email']}";
     ?>
   </h1>

@@ -14,6 +14,11 @@ function serve_index(){
 // ##################################################
 get('/admin', 'serve_admin');
 function serve_admin(){
+  session_start();
+  if( ! isset( $_SESSION['email'] ) ){
+    header('Location: /login');
+    exit();
+  }
   require_once(__DIR__.'/views/view_admin.php');
   exit();
 }
