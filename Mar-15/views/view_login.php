@@ -12,5 +12,3 @@
     <button>login</button>
   </form>
 
-</body>
-</html>

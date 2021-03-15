@@ -8,6 +8,7 @@ function serve_index(){
   $page_title = 'Welcome';
   require_once(__DIR__.'/views/view_top.php');
   require_once(__DIR__.'/views/view_index.php');
+  require_once(__DIR__.'/views/view_bottom.php');
   exit();
 }
 
@@ -29,6 +30,7 @@ function serve_login(){
   $page_title = 'login';
   require_once(__DIR__.'/views/view_top.php');
   require_once(__DIR__.'/views/view_login.php');
+  require_once(__DIR__.'/views/view_bottom.php');
   exit();
 }
 
@@ -39,6 +41,7 @@ function serve_login_error(){
   require_once(__DIR__.'/views/view_top.php');
   $display_error = true;
   require_once(__DIR__.'/views/view_login.php');
+  require_once(__DIR__.'/views/view_bottom.php');
   exit();
 }
 
@@ -55,6 +58,7 @@ function serve_users(){
   $page_title = 'Users';
   require_once(__DIR__.'/views/view_top.php');
   require_once(__DIR__.'/views/view_users.php');
+  require_once(__DIR__.'/views/view_bottom.php');
   exit();
 }
 
