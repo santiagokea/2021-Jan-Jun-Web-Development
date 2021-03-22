@@ -36,8 +36,7 @@
         return
       }
       // hide the button inside the form
-      document.querySelector(form).style.display = "none"
-      
+      form.style.display = "none"      
     }
   </script>
 
