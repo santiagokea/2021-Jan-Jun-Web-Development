@@ -23,7 +23,11 @@ post('/posts/:id/:like_or_dislike', function($id, $like_or_dislike){
     echo 'Invalid id';
     exit(); // die()
   }
-
+  if( $like_or_dislike != 0 || $like_or_dislike != 1 ){
+    http_response_code(400);
+    echo 'Invalid like or dislike';
+    exit();
+  }
 
 
   // what is exit is the same as die, return, break?
