@@ -9,10 +9,14 @@ get('/', function(){
 });
 
 // ##################################################
+get('/posts', function(){
+  require_once($_SERVER['DOCUMENT_ROOT'].'/views/view_posts.php');
+});
+
+// ##################################################
 get('/users', function(){
   echo 'Users'; 
 });
-
 
 // ##################################################
 get('/users/:id', function($id){
