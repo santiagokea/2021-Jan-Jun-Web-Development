@@ -22,4 +22,15 @@ if( $like_or_dislike == 0){
 }
 
 
+if( $like_or_dislike == 1){
+  // UPDATE posts SET likes = likes +1 WHERE post_id = 1
+  $number = file_get_contents("{$_SERVER['DOCUMENT_ROOT']}/db/likes.txt"); // read the content of the file
+  $number = $number+1;
+  // write back to the file. Second argument is the data to be written
+  file_put_contents("{$_SERVER['DOCUMENT_ROOT']}/db/likes.txt", $number);
+  echo $number;
+  exit();
+}
+
+
 // http_response_code(200) // Default for php
