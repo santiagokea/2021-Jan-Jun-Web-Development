@@ -12,12 +12,8 @@
   
     <div class="post">
       <div>This is post one</div>
-      <form class="like" onsubmit="like(); return false">
-        <button>like</button>
-      </form>
-      <form class="dislike" onsubmit="dislike(); return false">
-        <button>dislike</button>
-      </form>      
+      <button class="like" onclick="like(); return false">like</button>
+      <button class="dislike" onclik="dislike(); return false">dislike</button>    
     </div>
 
   
@@ -26,9 +22,9 @@
 
   <script>
     async function like(){
-      let form = event.target     
-      let form_parent = form.parentNode
-      console.log(form_parent) 
+      let button = event.target     
+      let button_parent = button.parentNode
+      console.log(button_parent) 
       let conn = await fetch('/posts/1/1', {
         method:"POST"
       })
@@ -37,13 +33,13 @@
         alert("sorry, we are updating our servers") 
         return
       }
-      form_parent.querySelector(".like").style.display = "none" 
-      form_parent.querySelector(".dislike").style.display = "grid"
+      button_parent.querySelector(".like").style.display = "none" 
+      button_parent.querySelector(".dislike").style.display = "grid"
     }
 
     async function dislike(){
-      let form = event.target 
-      let form_parent = form.parentNode     
+      let button = event.target 
+      let button_parent = button.parentNode     
       let conn = await fetch('/posts/1/0', {
         method:"POST"
       })
@@ -52,8 +48,8 @@
         alert("sorry, we are updating our servers") 
         return
       }
-      form_parent.querySelector(".like").style.display = "grid" 
-      form_parent.querySelector(".dislike").style.display = "none"     
+      button_parent.querySelector(".like").style.display = "grid" 
+      button_parent.querySelector(".dislike").style.display = "none"     
     }
 
 
