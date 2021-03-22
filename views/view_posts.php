@@ -34,8 +34,9 @@
         alert("sorry, we are updating our servers") 
         return
       }
+      
       button_parent.querySelector(".like").classList.add('hide')
-      button_parent.querySelector(".dislike").classList.add('show')
+      button_parent.querySelector(".dislike").classList.remove('hide')
     }
 
     async function dislike(){
@@ -49,8 +50,8 @@
         alert("sorry, we are updating our servers") 
         return
       }
-      button_parent.querySelector(".like").classList.add('show')
       button_parent.querySelector(".dislike").classList.add('hide')
+      button_parent.querySelector(".like").classList.remove('hide')
     }
 
 
