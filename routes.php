@@ -4,6 +4,11 @@
 require_once($_SERVER['DOCUMENT_ROOT'].'/router.php');
 
 // ##################################################
+get('/', function(){
+  echo 'Index';
+});
+
+
 
 
 
