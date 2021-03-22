@@ -12,12 +12,19 @@
   
     <div class="post">
       <div>This is post one</div>
-      <a href="">LIKE</a>
-      <a href="">DISLIKE</a>
+      <form onsubmit="return false">
+        <button>like</button>
+      </form>
     </div>
 
   
   </div>
+
+
+  <script>
+  
+  </script>
+
 
 </body>
 </html>
