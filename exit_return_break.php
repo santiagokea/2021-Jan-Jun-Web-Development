@@ -2,7 +2,7 @@
 
 // exit is for everything anywhere
 // return is used inside functions
-// break is used inside loops
+// break is used inside loops and switches
 
 $letters = ['a', 'b', 'c'];
 foreach($letters as $letter){
