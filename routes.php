@@ -29,7 +29,10 @@ post('/users/:id', function($id){
   echo "Updating user with id: $id";
 });
 
-
+// ##################################################
+delete('/users/:id', function($id){
+  echo "Deleting user with id: $id";
+});
 
 // ##################################################
 any('/404', function(){
