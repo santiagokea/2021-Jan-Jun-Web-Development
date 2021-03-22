@@ -54,9 +54,12 @@
     }
 
     async function dislike(){
-      let button = event.target 
-      let button_parent = button.parentNode     
-      let conn = await fetch('/posts/1/0', {
+      let button = event.target     
+      let button_parent = button.parentNode
+      // let post_id = button_parent.id
+      let post_id_from_data_attr = button_parent.getAttribute("data-post-id")
+      console.log(post_id_from_data_attr) 
+      let conn = await fetch(`/posts/${post_id_from_data_attr}/0`, {
         method:"POST"
       })
       // if( conn.status != 200 ){ alert("something went wrong") }
