@@ -19,7 +19,10 @@ get('/users/:id', function($id){
   echo "Getting user with id $id";
 });
 
-
+// ##################################################
+post('/users', function(){
+  echo 'User created with id: 1';
+});
 
 
 
