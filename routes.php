@@ -24,6 +24,10 @@ post('/users', function(){
   echo 'User created with id: 1';
 });
 
+// ##################################################
+any('/404', function(){
+  echo 'Page not found';
+});
 
 
 
