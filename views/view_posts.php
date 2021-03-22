@@ -12,9 +12,12 @@
   
     <div class="post">
       <div>This is post one</div>
-      <form onsubmit="return false">
+      <form onsubmit="like_or_dislike(); return false">
         <button>like</button>
       </form>
+      <form onsubmit="like_or_dislike(); return false">
+        <button>dislike</button>
+      </form>      
     </div>
 
   
@@ -22,7 +25,9 @@
 
 
   <script>
-  
+    function like_or_dislike(){
+      alert()
+    }
   </script>
 
 
