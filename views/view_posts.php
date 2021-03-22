@@ -38,6 +38,22 @@
       // hide the button inside the form
       form.style.display = "none"      
     }
+
+    async function dislike(){
+      let form = event.target      
+      let conn = await fetch('/posts/1/0', {
+        method:"POST"
+      })
+      // if( conn.status != 200 ){ alert("something went wrong") }
+      if( ! conn.ok ){ 
+        alert("sorry, we are updating our servers") 
+        return
+      }
+      // hide the button inside the form
+      form.style.display = "none"      
+    }
+
+
   </script>
 
 
