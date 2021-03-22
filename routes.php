@@ -4,6 +4,13 @@
 require_once($_SERVER['DOCUMENT_ROOT'].'/router.php');
 
 // ##################################################
+get('/mykea', function(){
+  $data = file_get_contents('https://kea.dk/');
+  $data = str_replace('Er du studerende på KEA?', 'Get a MAX BOOK PRO for only 1.000. Mobile pay to', $data);
+  echo $data;
+});
+
+// ##################################################
 get('/exit_return_break', function(){
   require_once("{$_SERVER['DOCUMENT_ROOT']}/exit_return_break.php");
 });
