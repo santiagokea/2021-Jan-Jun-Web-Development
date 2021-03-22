@@ -25,6 +25,13 @@ post('/users', function(){
 });
 
 // ##################################################
+post('/users/:id', function($id){
+  echo "Updating user with id: $id";
+});
+
+
+
+// ##################################################
 any('/404', function(){
   echo 'Page not found';
 });
