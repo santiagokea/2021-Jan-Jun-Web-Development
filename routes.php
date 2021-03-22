@@ -4,39 +4,18 @@
 require_once($_SERVER['DOCUMENT_ROOT'].'/router.php');
 
 // ##################################################
-get('/', function(){
-  echo 'Index'; 
-});
-
-// ##################################################
 get('/posts', function(){
-  require_once($_SERVER['DOCUMENT_ROOT'].'/views/view_posts.php');
+  // require_once($_SERVER['DOCUMENT_ROOT'].'/views/view_posts.php');
+  require_once("{$_SERVER['DOCUMENT_ROOT']}/views/view_posts.php");
 });
 
-// ##################################################
-get('/users', function(){
-  echo 'Users'; 
-});
 
 // ##################################################
-get('/users/:id', function($id){
-  echo "Getting user with id $id";
+post('/posts/:id/:like_or_dislike', function($id, $like_or_dislike){
+  echo "The user $like_or_dislike post with id $id";
 });
 
-// ##################################################
-post('/users', function(){
-  echo 'User created with id: 1';
-});
 
-// ##################################################
-post('/users/:id', function($id){
-  echo "Updating user with id: $id";
-});
-
-// ##################################################
-delete('/users/:id', function($id){
-  echo "Deleting user with id: $id";
-});
 
 // ##################################################
 any('/404', function(){
