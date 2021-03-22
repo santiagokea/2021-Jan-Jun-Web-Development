@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/app.css">
   <title>POSTS</title>
 </head>
 <body>
@@ -33,8 +34,8 @@
         alert("sorry, we are updating our servers") 
         return
       }
-      button_parent.querySelector(".like").style.display = "none" 
-      button_parent.querySelector(".dislike").style.display = "grid"
+      button_parent.querySelector(".like").classList.add('hide')
+      button_parent.querySelector(".dislike").classList.add('show')
     }
 
     async function dislike(){
@@ -48,8 +49,8 @@
         alert("sorry, we are updating our servers") 
         return
       }
-      button_parent.querySelector(".like").style.display = "grid" 
-      button_parent.querySelector(".dislike").style.display = "none"     
+      button_parent.querySelector(".like").classList.add('show')
+      button_parent.querySelector(".dislike").classList.add('hide')
     }
 
 
