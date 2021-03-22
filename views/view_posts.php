@@ -12,10 +12,10 @@
   
     <div class="post">
       <div>This is post one</div>
-      <form onsubmit="like_or_dislike(); return false">
+      <form onsubmit="like(); return false">
         <button>like</button>
       </form>
-      <form onsubmit="like_or_dislike(); return false">
+      <form onsubmit="dislike(); return false">
         <button>dislike</button>
       </form>      
     </div>
@@ -25,8 +25,21 @@
 
 
   <script>
-    function like_or_dislike(){
-      alert()
+    async function like(){
+
+      let form = event.target
+      
+      let conn = await fetch('/posts/1/1', {
+        method:"POST"
+      })
+      // if( conn.status != 200 ){ alert("something went wrong") }
+      if( ! conn.ok ){ 
+        alert("sorry, we are updating our servers") 
+        return
+      }
+
+      console.log(form)
+      
     }
   </script>
 
