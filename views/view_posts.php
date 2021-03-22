@@ -9,13 +9,31 @@
 </head>
 <body>
   
-  <div id="posts">
-  
+  <?php
+  $post_id = 1;
+  $post_status = 0; // 1 like | 0 dislike
+  ?>
+
+  <div id="posts">  
+
     <div id="Post_1"  class="post" data-post-id="1">
       <div>This is post one</div>
-      <button class="like" onclick="like(); return false">like</button>
-      <button class="dislike" onclick="dislike(); return false">dislike</button>    
+      <button class="like <?php if($post_status == 1){echo 'show';} ?>" onclick="like(); return false">
+        like
+      </button>
+      <button class="dislike <?php if($post_status == 1){echo 'hide';} ?>" onclick="dislike(); return false">
+        dislike
+      </button>    
     </div>
+
+
+
+
+
+
+
+
+
 
     <div id="Post_2"  class="post" data-post-id="2">
       <div>This is post one</div>
@@ -52,6 +70,7 @@
       button_parent.querySelector(".like").classList.add('hide')
       button_parent.querySelector(".dislike").classList.remove('hide')
     }
+
 
     async function dislike(){
       let button = event.target     
