@@ -11,4 +11,12 @@ if( $like_or_dislike != 0 && $like_or_dislike != 1 ){
   exit();
 }
 
+if( $like_or_dislike == 0){
+  // UPDATE posts SET likes = likes +1 WHERE post_id = 1
+  $data = file_get_contents("{$_SERVER['DOCUMENT_ROOT']}/db/dislikes.txt"); // read the content of the file
+  echo 'DISLIKING...';
+  exit();
+}
+
+
 // http_response_code(200) // Default for php
