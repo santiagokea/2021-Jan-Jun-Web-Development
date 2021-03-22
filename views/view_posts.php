@@ -13,7 +13,7 @@
     <div class="post">
       <div>This is post one</div>
       <button class="like" onclick="like(); return false">like</button>
-      <button class="dislike" onclik="dislike(); return false">dislike</button>    
+      <button class="dislike" onclick="dislike(); return false">dislike</button>    
     </div>
 
   
