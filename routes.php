@@ -5,9 +5,19 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/router.php');
 
 // ##################################################
 get('/', function(){
-  echo 'Index';
+  echo 'Index'; 
 });
 
+// ##################################################
+get('/users', function(){
+  echo 'Users'; 
+});
+
+
+// ##################################################
+get('/users/:id', function($id){
+  echo "Getting user with id $id";
+});
 
 
 
