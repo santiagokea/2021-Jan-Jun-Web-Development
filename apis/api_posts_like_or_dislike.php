@@ -17,6 +17,7 @@ if( $like_or_dislike == 0){
   $number = $number+1;
   // write back to the file. Second argument is the data to be written
   file_put_contents("{$_SERVER['DOCUMENT_ROOT']}/db/dislikes.txt", $number);
+  echo $number;
   exit();
 }
 
