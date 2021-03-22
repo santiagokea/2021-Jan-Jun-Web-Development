@@ -26,9 +26,7 @@
 
   <script>
     async function like(){
-
-      let form = event.target
-      
+      let form = event.target      
       let conn = await fetch('/posts/1/1', {
         method:"POST"
       })
@@ -37,8 +35,8 @@
         alert("sorry, we are updating our servers") 
         return
       }
-
-      console.log(form)
+      // hide the button inside the form
+      document.querySelector(form).style.display = "none"
       
     }
   </script>
