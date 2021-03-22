@@ -12,7 +12,11 @@ get('/posts', function(){
 
 // ##################################################
 post('/posts/:id/:like_or_dislike', function($id, $like_or_dislike){
-  echo "The user $like_or_dislike post with id $id";
+  if( ! ctype_digit($id) ){
+    http_response_code(400);
+    echo 'Invalid id';
+    exit();
+  }
 });
 
 
