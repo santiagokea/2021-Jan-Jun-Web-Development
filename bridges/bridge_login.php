@@ -1,5 +1,6 @@
 <?php
-
+// VALIDATE EMAIL
+// VALIDATE PASSWORD
 try{
   $db_path = $_SERVER['DOCUMENT_ROOT'].'/db/users.db';
   $db = new PDO("sqlite:$db_path");
