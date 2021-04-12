@@ -38,7 +38,13 @@ try{
 <script>
 
 async function delete_user(user_id){
-  console.log(user_id)
+  let conn = await fetch(`/users/delete/${user_id}`, {
+    "method" : "POST"
+  })
+  if( ! conn.ok ){ alert("upps..."); return }
+  let data = await conn.text()
+  console.log(data)
+  event.target.parentNode.remove()
 }
 
 </script>
