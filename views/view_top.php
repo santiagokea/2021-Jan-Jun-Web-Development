@@ -8,3 +8,10 @@
   <title>APP</title>
 </head>
 <body>
+
+<nav>
+  <a href="/">home</a>
+  <a href="/users">users</a>
+  <a href="/login">login</a>
+</nav>
+
