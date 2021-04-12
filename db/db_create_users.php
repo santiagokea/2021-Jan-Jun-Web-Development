@@ -1,8 +1,8 @@
 <?php
 
 try{
-  // $db_path = $_SERVER['DOCUMENT_ROOT'].'/db/';
-  $db = new PDO("sqlite:users.db");
+  $db_path = $_SERVER['DOCUMENT_ROOT'].'/db/user.db';
+  $db = new PDO("sqlite:$db_path");
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
   $q = $db->prepare('DROP TABLE IF EXISTS users');
