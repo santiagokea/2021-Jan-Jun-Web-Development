@@ -28,6 +28,11 @@ post('/db-create-users', function(){
   require_once($_SERVER['DOCUMENT_ROOT'].'/db/db_create_users.php');
 });
 
+// ##############################
+post('/db-seed-users', function(){
+  require_once($_SERVER['DOCUMENT_ROOT'].'/db/db_seed_users.php');
+});
+
 
 // For GET or POST
 any('/404', function(){
