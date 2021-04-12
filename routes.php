@@ -11,6 +11,10 @@ get('/', function(){
 post('/users', function(){
   echo 'user created';
 });
+// ##############################
+post('/users/update/:id', function($id){
+  echo "Updating user with id: $id";
+});
 
 
 // For GET or POST
