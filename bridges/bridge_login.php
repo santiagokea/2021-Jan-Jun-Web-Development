@@ -19,8 +19,6 @@ if( strlen($_POST['login_user_password']) < 2 ||
 }
 
 
-
-
 try{
   $db_path = $_SERVER['DOCUMENT_ROOT'].'/db/users.db';
   $db = new PDO("sqlite:$db_path");
@@ -37,6 +35,8 @@ try{
     header('Location: /login');
     exit();
   }
+  session_start();
+  $_SESSION['user_uuid'] = $user['user_uuid'];
   header('Location: /admin');
   exit();
 }catch(PDOException $ex){
