@@ -24,7 +24,7 @@ post('/users/update/:id', function($id){
 
 // ##############################
 post('/users/delete/:id', function($id){
-  echo "Updating user with id: $id";
+  echo "Deleting user with id: $id";
 });
 
 
