@@ -21,7 +21,12 @@ get('/users', function(){
 
 // ##############################
 // ##############################
-// ##############################
+// ##############################¨
+
+post('/login', function(){
+  require_once($_SERVER['DOCUMENT_ROOT'].'/bridges/bridge_login.php');
+});
+
 post('/users/create', function(){
   echo 'user created';
 });
