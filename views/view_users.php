@@ -16,6 +16,11 @@ try{
   ?>
     <div class="user">
       <div>ID: <?= $user['user_uuid'] ?></div>
+      <div>NAME: <?= $user['user_uuid'] ?></div>
+      <div>LAST NAME: <?= $user['user_uuid'] ?></div>
+      <div>EMAIL: <?= $user['user_uuid'] ?></div>
+      <div>PHONE: <?= $user['user_uuid'] ?></div>
+      <div>PASSWORD: <?= $user['user_uuid'] ?></div>
     </div>
   <?php
   }
