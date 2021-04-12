@@ -4,7 +4,7 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/router.php');
 
 // ##############################
 get('/', function(){
-  echo 'x';
+  require_once($_SERVER['DOCUMENT_ROOT'].'/views/view_index.php');
 });
 
 
