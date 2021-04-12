@@ -8,6 +8,11 @@ get('/', function(){
 });
 
 // ##############################
+get('/admin', function(){
+  require_once($_SERVER['DOCUMENT_ROOT'].'/views/view_admin.php');
+});
+
+// ##############################
 get('/login', function(){
   require_once($_SERVER['DOCUMENT_ROOT'].'/views/view_login.php');
 });
