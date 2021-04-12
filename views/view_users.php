@@ -11,9 +11,15 @@ try{
   $q = $db->prepare('SELECT * FROM users');
   $q->execute();
   $users = $q->fetchAll();
+  echo '<div id="users">';
   foreach($users as $user){
-    echo 'x';
+  ?>
+    <div class="user">
+      <div>ID: <?= $user['user_uuid'] ?></div>
+    </div>
+  <?php
   }
+  echo '</div>';
 }catch(PDOException $ex){
   echo $ex;
 }
