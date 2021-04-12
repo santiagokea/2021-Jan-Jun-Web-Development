@@ -1,6 +1,26 @@
 <?php
-// VALIDATE EMAIL
-// VALIDATE PASSWORD
+
+if( ! isset($_POST['login_user_email']) ){
+  header('Location: /login');
+  exit();  
+}
+if( ! isset($_POST['login_user_password']) ){
+  header('Location: /login');
+  exit();  
+}
+if( ! filter_var($_POST['login_user_email'], FILTER_VALIDATE_EMAIL) ){
+  header('Location: /login');
+  exit();  
+}
+if( strlen($_POST['login_user_password']) < 2 || 
+    strlen($_POST['login_user_password']) > 50 ){
+  header('Location: /login');
+  exit();  
+}
+
+
+
+
 try{
   $db_path = $_SERVER['DOCUMENT_ROOT'].'/db/users.db';
   $db = new PDO("sqlite:$db_path");
