@@ -23,7 +23,7 @@ post('/users/update/:id', function($id){
 });
 
 // ##############################
-post('/users/delete/:id', function($id){
+post('/users/delete/:user_id', function($user_id){
   require_once($_SERVER['DOCUMENT_ROOT'].'/apis/api_delete_user.php');
 });
 

@@ -45,8 +45,8 @@ async function delete_user(user_id){
   if( ! conn.ok ){ alert("upps..."); return }
   let data = await conn.text()
   console.log(data)
+  div_user.remove()
 }
-div_user.remove()
 </script>
 <?php
 
