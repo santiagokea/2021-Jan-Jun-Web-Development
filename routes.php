@@ -7,6 +7,11 @@ get('/', function(){
   require_once($_SERVER['DOCUMENT_ROOT'].'/views/view_index.php');
 });
 
+// ##############################
+post('/users', function(){
+  echo 'user created';
+});
+
 
 // For GET or POST
 any('/404', function(){
