@@ -16,6 +16,8 @@ try{
     header('Location: /login');
     exit();
   }
+  header('Location: /admin');
+  exit();
 }catch(PDOException $ex){
   echo $ex;
 }
