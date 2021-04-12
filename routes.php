@@ -8,10 +8,19 @@ get('/', function(){
 });
 
 // ##############################
+get('/login', function(){
+  require_once($_SERVER['DOCUMENT_ROOT'].'/views/view_login.php');
+});
+
+// ##############################
 get('/users', function(){
   require_once($_SERVER['DOCUMENT_ROOT'].'/views/view_users.php');
 });
 
+
+
+// ##############################
+// ##############################
 // ##############################
 post('/users/create', function(){
   echo 'user created';
