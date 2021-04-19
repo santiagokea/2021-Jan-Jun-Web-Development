@@ -8,9 +8,11 @@ get('/admin', 'views/view_admin.php');
 get('/login', 'views/view_login.php');
 get('/users', 'views/view_users.php');
 
+get('/test', 'views/view_test.php');
+
 // ##############################
 // ##############################
-// ##############################¨
+// ##############################
 post('/deactive-account', 'views/deactivate_account.php');
 post('/login', 'bridges/bridge_login.php');
 
