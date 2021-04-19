@@ -15,19 +15,18 @@ try{
   $q = $db->prepare(' UPDATE users 
                       SET user_active = :user_active 
                       WHERE user_uuid = :user_uuid ');
-  $q->bindValue(':user_active', 1);
+  $q->bindValue(':user_active', 0);
   $q->bindValue(':user_uuid', $_SESSION['user_uuid']);
   $q->execute();
   // fetch fetchAll 
   // rowCount works on Update Delete
-  if( $q->rowCount() ){
-  ?>
-    <div>Hi <?=$user['user_name']?>  <?=$user['user_last_name']?></div>
-    <form action="/deactive-account" method="POST">
-      <button>deactivate account</button>
-    </form>
-  <?php
+  if( ! $q->rowCount() ){
+    header('Location: /admin');
+    exit();
   }
+
+  session_destroy(); // REALLY IMPORTANT
+
 }catch(PDOException $ex){
   echo $ex;
 }
