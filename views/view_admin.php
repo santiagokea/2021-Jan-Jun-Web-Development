@@ -1,11 +1,10 @@
 <?php
-session_start();
+if( ! isset($_SESSION) ){ session_start(); }
 
 if( ! isset( $_SESSION['user_uuid'] ) ){
   header('Location: /login');
   exit();  
 }
-
 
 try{
   $db_path = $_SERVER['DOCUMENT_ROOT'].'/db/users.db';

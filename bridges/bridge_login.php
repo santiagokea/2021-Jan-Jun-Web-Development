@@ -1,13 +1,17 @@
 <?php
 
+session_start();
+
 if( ! isset($_POST['login_user_email']) ){
   header('Location: /login');
   exit();  
 }
+
 if( ! isset($_POST['login_user_password']) ){
   header('Location: /login');
   exit();  
 }
+
 if( ! filter_var($_POST['login_user_email'], FILTER_VALIDATE_EMAIL) ){
   header('Location: /login');
   exit();  
@@ -39,6 +43,7 @@ try{
     exit();  
   }
 
+  $_SESSION['user_uuid'] = $user['user_uuid'];
   header('Location: /admin');
   exit();
 
