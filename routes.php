@@ -5,9 +5,11 @@ require_once($_SERVER['DOCUMENT_ROOT'].'/router.php');
 // ##############################
 get('/', 'views/view_index.php');
 get('/admin', 'views/view_admin.php');
+get('/email', 'views/view_email.php');
 get('/login', 'views/view_login.php');
 get('/users', 'views/view_users.php');
 get('/signup', 'views/view_signup.php');
+
 
 // ##############################
 // ##############################
