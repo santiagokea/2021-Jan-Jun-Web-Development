@@ -14,7 +14,7 @@ try{
     user_email        TEXT UNIQUE,
     user_phone        TEXT UNIQUE,
     user_password     TEXT,
-    active            TEXT,
+    user_active            TEXT,
     PRIMARY KEY(user_uuid)
   ) WITHOUT ROWID');
   $q->execute();
