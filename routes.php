@@ -3,66 +3,25 @@
 require_once($_SERVER['DOCUMENT_ROOT'].'/router.php');
 
 // ##############################
-get('/', function(){
-  require_once($_SERVER['DOCUMENT_ROOT'].'/views/view_index.php');
-});
-
-// ##############################
-get('/admin', function(){
-  require_once($_SERVER['DOCUMENT_ROOT'].'/views/view_admin.php');
-});
-
-// ##############################
-get('/login', function(){
-  require_once($_SERVER['DOCUMENT_ROOT'].'/views/view_login.php');
-});
-
-// ##############################
-get('/users', function(){
-  require_once($_SERVER['DOCUMENT_ROOT'].'/views/view_users.php');
-});
-
-
+get('/', 'views/view_index.php');
+get('/admin', 'views/view_admin.php');
+get('/login', 'views/view_login.php');
+get('/users', 'views/view_users.php');
 
 // ##############################
 // ##############################
 // ##############################¨
-
-post('/deactive-account', function(){
-  require_once($_SERVER['DOCUMENT_ROOT'].'/views/deactivate_account.php');
-});
-
-post('/login', function(){
-  require_once($_SERVER['DOCUMENT_ROOT'].'/bridges/bridge_login.php');
-});
-
-post('/users/create', function(){
-  echo 'user created';
-});
+post('/deactive-account', 'views/deactivate_account.php');
+post('/login', 'bridges/bridge_login.php');
 
 // ##############################
-post('/users/update/:id', function($id){
-  echo "Updating user with id: $id";
-});
+// post('/users/update/:id', function($id){
+//   echo "Updating user with id: $id";
+// });
 
-// ##############################
-post('/users/delete/:user_id', function($user_id){
-  require_once($_SERVER['DOCUMENT_ROOT'].'/apis/api_delete_user.php');
-});
+post('/users/delete/$user_id', 'apis/api_delete_user.php');
+post('/db-create-users', 'db/db_create_users.php');
+post('/db-seed-users', 'db/db_seed_users.php');
 
+any('/404', 'views/view_404.php');
 
-// ##############################
-post('/db-create-users', function(){
-  require_once($_SERVER['DOCUMENT_ROOT'].'/db/db_create_users.php');
-});
-
-// ##############################
-post('/db-seed-users', function(){
-  require_once($_SERVER['DOCUMENT_ROOT'].'/db/db_seed_users.php');
-});
-
-
-// For GET or POST
-any('/404', function(){
-  echo 'Not found';
-});
