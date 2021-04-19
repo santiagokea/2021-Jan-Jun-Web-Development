@@ -28,8 +28,8 @@ get('/users', function(){
 // ##############################
 // ##############################¨
 
-post('/deactivate-account', function(){
-  require_once($_SERVER['DOCUMENT_ROOT'].'/views/deactivate-account.php');
+post('/deactive-account', function(){
+  require_once($_SERVER['DOCUMENT_ROOT'].'/views/deactivate_account.php');
 });
 
 post('/login', function(){
