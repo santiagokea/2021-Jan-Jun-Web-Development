@@ -8,6 +8,7 @@ get('/admin', 'views/view_admin.php');
 get('/email', 'views/view_email.php');
 get('/login', 'views/view_login.php');
 get('/users', 'views/view_users.php');
+get('/search', 'views/view_search.php');
 get('/signup', 'views/view_signup.php');
 
 
