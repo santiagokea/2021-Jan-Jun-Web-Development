@@ -42,11 +42,15 @@
   <script>
     // People prof. exp. use this approach
     var search_timer // used to stop the search_timer
-    function search(){
+     function search(){
       if(search_timer){ clearTimeout(search_timer) }
       if(event.target.value.length >= 2){
-        search_timer = setTimeout( function(){
-        console.log("searching...")
+        search_timer = setTimeout( async function(){
+        let conn = await fetch('/search', {
+          method : "POST",
+          body : new FormData(document.querySelector("form"))
+        })
+
         show_results()
         }, 500 )
       }else{
