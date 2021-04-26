@@ -17,6 +17,7 @@
       width: 100%;
     }
     #search_results{
+      display: none;
       width: 100%;
       max-height: 50vh;
       border: 1px solid black;
@@ -46,17 +47,22 @@
       if(event.target.value.length >= 2){
         search_timer = setTimeout( function(){
         console.log("searching...")
+        show_results()
         }, 500 )
+      }else{
+        hide_results()
       }
     }
 
     function show_results(){
+      document.querySelector("#search_results").style.display = "grid"
       // display search_results div
       // populate/render the individual results
     }
 
     function hide_results(){
       // hide search_results div
+      document.querySelector("#search_results").style.display = "none"
     }
 
   </script>
