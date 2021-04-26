@@ -28,7 +28,7 @@
 <body>
   
   <form onsubmit="return false">
-    <input name="search_for" type="text"  oninput="search()" onfocus="show_results()" onblur="hide_results()">
+    <input name="search_for" type="text"  oninput="search()" onfocus="show_results()">
     <div id="search_results"></div>
   </form>
 
