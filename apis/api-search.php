@@ -14,4 +14,22 @@ if( strlen($_POST['search_for']) > 20 ){
   exit();
 }
 
+try{
+  $db_path = $_SERVER['DOCUMENT_ROOT'].'/db/users.db';
+  $db = new PDO("sqlite:$db_path");
+  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+  // full text search
+  $q = $db->prepare('SELECT * FROM users WHERE user_name = :user_name COLLATE NOCASE');
+  $q->bindValue(':user_name', $_POST['search_for']);
+  $q->execute();
+  $users = $q->fetchAll();
+  // Cannot pass arrays or json to the front-end. You can "arrays" looking like "json" looking like string
+  // echo $users; // associative array
+  echo json_encode($users);
+}catch(PDOException $ex){
+  echo $ex;
+}
+
+
 
