@@ -5,11 +5,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    *{
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    form{
+      width: 100%;
+      padding: 1rem;
+    }
+    input{
+      width: 100%;
+    }
+    #search_results{
+      width: 100%;
+      height: 80vh;
+      border: 1px solid black;
+    }
+  </style>
 </head>
 <body>
   
   <form onsubmit="return false">
     <input name="search_for" type="text" oninput="search()">
+    <div id="search_results"></div>
   </form>
 
   <script>
