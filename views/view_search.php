@@ -14,9 +14,10 @@
 
   <script>
     function search(){
-      setTimeout( function(){
+      var timer = setTimeout( function(){
         console.log("searching...")
       }, 1000 )
+      clearTimeout(timer);
     }
   </script>
 
