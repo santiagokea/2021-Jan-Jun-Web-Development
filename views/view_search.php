@@ -18,8 +18,9 @@
     }
     #search_results{
       width: 100%;
-      height: 80vh;
+      max-height: 50vh;
       border: 1px solid black;
+      overflow-y: scroll;
     }
   </style>
 </head>
@@ -27,7 +28,14 @@
   
   <form onsubmit="return false">
     <input name="search_for" type="text" oninput="search()">
-    <div id="search_results"></div>
+    <div id="search_results">
+      <div class="search_result">
+        AAA
+      </div>
+      <div class="search_result">
+        BBB
+      </div>
+    </div>
   </form>
 
   <script>
