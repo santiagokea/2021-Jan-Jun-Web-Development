@@ -53,7 +53,10 @@
         if( ! conn.ok ){ alert('uppps....') }
         let users = await conn.json()
         console.log(users)
-
+        // populate the results
+        users.forEach( user => {
+          console.log(user)
+        })
         show_results()
         }, 500 )
       }else{
