@@ -13,11 +13,14 @@
   </form>
 
   <script>
+    var timer // used to stop the timer
     function search(){
-      var timer = setTimeout( function(){
+      if(timer){ clearTimeout(timer) }
+      if(event.target.value.length >= 2){
+        timer = setTimeout( function(){
         console.log("searching...")
-      }, 1000 )
-      clearTimeout(timer);
+        }, 500 )
+      }
     }
   </script>
 
