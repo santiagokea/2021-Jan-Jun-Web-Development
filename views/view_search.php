@@ -51,7 +51,7 @@
         users.forEach( user => {
           let user_div = `
           <div class="search_result">
-            ${user.user_name} ${user.user_last_name}
+            <a href="/users/${user.user_uuid}">${user.user_name} ${user.user_last_name}</a>
           </div>`
           document.querySelector("#search_results").insertAdjacentHTML('beforeend', user_div)
         })
