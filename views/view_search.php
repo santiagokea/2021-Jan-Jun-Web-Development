@@ -51,8 +51,8 @@
           body : new FormData(document.querySelector("form"))
         })
         if( ! conn.ok ){ alert('uppps....') }
-        let string_users = await conn.text()
-        console.log(string_users)
+        let users = await conn.json()
+        console.log(users)
 
         show_results()
         }, 500 )
