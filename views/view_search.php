@@ -14,7 +14,9 @@
 
   <script>
     function search(){
-      console.log("searching...")
+      setTimeout( function(){
+        console.log("searching...")
+      }, 1000 )
     }
   </script>
 
