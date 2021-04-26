@@ -23,7 +23,7 @@ try{
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
   // full text search
-  $q = $db->prepare(' SELECT * 
+  $q = $db->prepare(' SELECT user_name, user_last_name, user_phone, user_email
                       FROM users 
                       WHERE user_uuid = :user_uuid 
                       LIMIT 1');
