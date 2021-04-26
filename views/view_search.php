@@ -49,6 +49,16 @@
         }, 500 )
       }
     }
+
+    function show_results(){
+      // display search_results div
+      // populate/render the individual results
+    }
+
+    function hide_results(){
+      // hide search_results div
+    }
+
   </script>
 
 
